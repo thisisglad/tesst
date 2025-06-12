@@ -45,9 +45,9 @@ data class PackMeta(
         val default by lazy {
             PackMeta(
                 Pack(
-                    BOOTSTRAP.mcmetaVersion(),
+                    PackOverlay.LEGACY.minVersion,
                     "BetterHud's default resource pack.",
-                    VersionRange(9, 99)
+                    VersionRange(PackOverlay.LEGACY.minVersion, 99)
                 ),
                 Overlay(PackOverlay.entries.filter {
                     it.ordinal > 0
